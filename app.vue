@@ -1,8 +1,8 @@
 <template>
   <TimePicker />
+  <Credits />
 </template>
 
 <script>
-import {TimePicker} from '#components'
-
+import {TimePicker, Credits} from '#components'
 </script>
