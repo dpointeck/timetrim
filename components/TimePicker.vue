@@ -34,9 +34,13 @@ const totalBreakTime = ref(FRAUSCHER_BREAK_IN_MINUTES);
 
 const resultTime = computed(() => {
     let end = DateTime.fromFormat(endTime.value, "HH:mm")
+    
+    if (totalBreakTime.value == '') {
+        return end.toFormat('HH:mm')
+    }
+    
     return end.minus({ minutes: totalBreakTime.value }).toFormat('HH:mm')
 })
-
 
 function getCurrentTime() {
     return DateTime.now().toFormat("HH:mm");
