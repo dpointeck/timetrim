@@ -26,11 +26,11 @@
 import { ref, computed } from '#imports'
 import { DateTime } from "luxon";
 
-const FRAUSCHER_BREAK_IN_MINUTES = 45;
+const DEFAULT_BREAK_IN_MINUTES = 45;
 
 const currentTime = getCurrentTime();
 const endTime = ref(currentTime);
-const totalBreakTime = ref(FRAUSCHER_BREAK_IN_MINUTES);
+const totalBreakTime = ref(DEFAULT_BREAK_IN_MINUTES);
 
 const resultTime = computed(() => {
     let end = DateTime.fromFormat(endTime.value, "HH:mm")
