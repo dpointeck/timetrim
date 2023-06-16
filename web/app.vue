@@ -5,4 +5,3 @@
 
 <script>
 import {TimePicker, Credits} from '#components'
-</script>

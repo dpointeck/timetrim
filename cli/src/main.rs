@@ -1,17 +1,9 @@
-use clap::{Parser};
-
-#[derive(Parser, Debug)]
-#[command(author, version, about, long_about = None)]
-struct Args {
-    /// Name of the person to greet
-    #[arg(short, long)]
-    time: String,
-
-}
-
+use crate::args::Args;
+use clap::Parser;
+use crate::time::get_utc_time;
 
 fn main() {
     let args = Args::parse();
-
-    println!("Hello, {}!", args.time);
+    println!("{:?}", get_utc_time());
+    println!("time: {}, break: {}", args.time, args.pause)
 }
