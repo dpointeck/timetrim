@@ -1,4 +1,4 @@
-# TimeTrim
+# TimeTrim Web
 
 TimeTrim is a little helper app to subtrackt the break time from the endtime of my working day.
 I made it with the Nuxt starter ([Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction))
